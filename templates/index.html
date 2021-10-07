@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h2 {
+            text-align: center;
+                }
+
+            img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+                }
+
+            input[type=submit], input[type=file] {
+            background-color: #00FFFF;
+            border: none;
+            color: black;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            text-align: center;
+                }
+        </style>
+        <meta charset="UTF-8">
+        <title>Simple Predict Cat and Dog</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='static/main.css') }}">
+    </head>
+    <body>
+        <script src="scripts.js"></script>
+        <img class = 'center' src="https://cdn.shopify.com/s/files/1/0272/4770/6214/articles/introducing-a-dog-to-a-cat-home.jpg?v=1593020063" height="300" width="500" class=”cropimg”>
+        <br>
+        <h2>Upload file</h2>
+        <p>{{ value }}</p>
+        <form method="post" , enctype="multipart/form-data">
+            <input type="file" onchange="preview()", name="file">
+            <img id="frame" src="" width="100px" height="100px"/>
+            <input type="submit" value="Upload">
+        </form>
+    </body>
+</html>
